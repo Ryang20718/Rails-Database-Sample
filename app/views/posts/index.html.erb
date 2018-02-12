@@ -1,6 +1,6 @@
-<h1>List of Locker Info</h1>
+<h1>Locker Info</h1>
 <a href = '/posts/new'><h2>Link</h2></a>
 <% @posts.each do |post| %>
     <h3> <a href = '/posts/show/<%= post.id %>'><%= post.id %>: <%= post.title %></a></h3>
 <% end %>
-<a href = '/posts/new'><h2>Back to index</h2></a>
+<a href = '/posts/new'><h2>Back to Home</h2></a>
