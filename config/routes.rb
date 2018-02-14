@@ -22,5 +22,6 @@ Rails.application.routes.draw do
     #deleteAll
     get '/posts/destroyAll' => 'posts#destroyAll'
     
+    post '/comment' => 'comment#create'
     root 'posts#new'
 end
