@@ -26,3 +26,8 @@
     <input type = "text" name = "input_comment" >
     <input type = "submit">
 </form>
+
+<% @post.comments.each do |comment|%>
+Comment:<%= comment.content %>
+    <a href = "/comment/ <%= @post.id %> /destroy/ <%= comment.id %>" data-method = "post" data-confirm = "Are you sure">[X]</a>
+<% end %>

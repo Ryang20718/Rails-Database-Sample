@@ -17,11 +17,13 @@ Rails.application.routes.draw do
     
     #delete
    # post '/posts/destroy/:post_id' => 'posts#destroy'
-    get '/posts/destroy/:post_id' => 'posts#destroy'
+    post '/posts/destroy/:post_id' => 'posts#destroy'
     
     #deleteAll
     get '/posts/destroyAll' => 'posts#destroyAll'
     
-    post '/comment' => 'comment#create'
+    post '/comment' => 'comments#create'
+    post '/comment/:post_id/destroy/:comment_id' => 'comments#destroy
+    '
     root 'posts#new'
 end
