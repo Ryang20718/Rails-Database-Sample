@@ -1,4 +1,15 @@
 class CommentsController < ApplicationController
+        
+    def destroy
+        
+        @comment = Comment.find(params[:comment_id])
+        @comment.destroy
+        
+        redirect_to "/posts/show/#{@comment.post_id}"
+        
+    end
+    
+    
     def create
         @comment = Comment.new
         @comment.content = params[:input_comment]
@@ -8,10 +19,5 @@ class CommentsController < ApplicationController
         redirect_to "/posts/show/#{@comment.post_id}"
     end
     
-    def destroy
-        @comment = Comment.find()
-        @comment.destroy
-        
-        redirect_to "/posts/show/#{@comment.post_id}"
-    end
+
 end
