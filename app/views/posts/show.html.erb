@@ -29,5 +29,5 @@
 
 <% @post.comments.each do |comment| %>
 Comment:<%= comment.content %>
-    <a href = "/comment/ <%= @post.id %> /destroy/ <%= comment.id %>" data-method = "post" data-confirm = "Are you sure">[X]</a>
+    <a href = "/comment/ <%= @post.id %> /destroy/ <%= comment.id %>" data-method = "post" data-confirm = "Deleting ... Are you sure">[X]</a>
 <% end %>
